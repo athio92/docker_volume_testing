@@ -1,0 +1,21 @@
+version: "3.0"
+services:
+  test_service1:
+    build: .
+    volumes:
+      # This creates an anonymous "volume" everytime "docker-compose up" is run
+      - /app  
+  test_service2:
+    build: .
+    volumes:
+      # This creates a named "volume" when "docker-compose up" is ran & volume did not exist. 
+      - this_is_a_name:/app 
+  test_service3:
+    build: .
+    volumes:
+      # This creates a "bind mount" when "docker-compose up" is run. It binds/links local machine's folder to container
+      - ./test_folder:/app
+
+
+volumes:
+  this_is_a_name:
