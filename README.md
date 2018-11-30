@@ -11,7 +11,7 @@ https://docs.docker.com/compose/reference(for docker-compose.yml  syntax guide)
 
 ## How to use this 
 1. Before you start, note your docker volume conditions by running `docker volume ls`. Remember the result.
-2. Go to `volume_testing` root directory
+2. Go to this package (`docker_volume_testing`)'s root directory
 3. Build all containers with `docker-compose build`, and start containers using `docker-compose up`
 4. Switch to a new terminal, and get the Container IDs of the three containers you just started using docker images test_services1, 2, and 3 by running `docker ps`
 5. Run this command below to inspect and learn what is exactly the volume type created for each container. Compare with docker-compose.yml configuration to understand the syntax.
