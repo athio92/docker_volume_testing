@@ -14,7 +14,7 @@ https://docs.docker.com/compose/reference(for docker-compose.yml  syntax guide)
 2. Go to this package (`docker_volume_testing`)'s root directory
 3. Build all containers with `docker-compose build`, and start containers using `docker-compose up`
 4. Switch to a new terminal, and get the Container IDs of the three containers you just started using docker images test_services1, 2, and 3 by running `docker ps`
-5. Run this command below to inspect and learn what is exactly the volume type created for each container. Compare with docker-compose.yml configuration to understand the syntax.
+5. Run this command below to inspect and learn what is exactly the volume type created for each container. Compare with docker-compose.yml configuration to understand the syntax. (The `grep -A 11 Mounts` simply is used as filter to show 11 lines from where `grep` finds the word "Mounts")
 
 ```
 docker inspect [container_id] | grep -A 11 Mounts
