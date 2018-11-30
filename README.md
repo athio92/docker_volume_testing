@@ -6,7 +6,8 @@ The nginx server is not important - it is set-up just so `docker-compose` does n
 
 ## Reading
 https://docs.docker.com/storage/  (for docker volume fundamentals - please understand difference between `volume` and `bind-mount`)
-https://docs.docker.com/storage/ (for docker-compose.yml  syntax guide)
+
+https://docs.docker.com/compose/reference(for docker-compose.yml  syntax guide)
 
 ## How to use this 
 1. Before you start, note your docker volume conditions by running `docker volume ls`. Remember the result.
