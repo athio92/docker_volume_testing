@@ -5,9 +5,9 @@ This short package is created for learning purpose. It gives examples of how to 
 The nginx server is not important - it is set-up just so `docker-compose` does not exit execution after `docker-compose up` is run, thereby giving us chance to inspect the containers and volumes being run.
 
 ## Reading
-https://docs.docker.com/storage/  (for docker volume fundamentals - please understand difference between `volume` and `bind-mount`)
+Read https://docs.docker.com/storage/  (for docker volume fundamentals - please understand difference between `volume` and `bind-mount`)
 
-https://docs.docker.com/compose/reference(for docker-compose.yml  syntax guide)
+Read https://docs.docker.com/compose/reference (for docker-compose.yml  syntax guide)
 
 ## How to use this 
 1. Before you start, note your docker volume conditions by running `docker volume ls`. Remember the result.
