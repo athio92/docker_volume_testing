@@ -19,5 +19,5 @@ https://docs.docker.com/compose/reference(for docker-compose.yml  syntax guide)
 ```
 docker inspect [container_id] | grep -A 11 Mounts
 ```
-6. For the container which volume type is `bind mount`, you can open a shell (`docker exec -it [container_id] sh`), cd to `/app` folder, and try to modify/create/delete files (ex: `touch testfile000.txt`). You will see that changes are synced to your laptop's `./test_folder` directory
-7. Stop and remove container (`docker-compose down`) and restart again (`docker-compose up`). Then, inspect list of docker volumes (`docker volume ls`). You will see that existing named `volumes` (not `bind mount`) are remounted to a new container, while anonymous `volumes` are created anew.
+6. For the container which volume type is `bind mount`, you can open a shell (`docker exec -it [container_id] sh`), `cd` to `/app` folder, and try to modify/create/delete files (ex: `touch testfile000.txt`). You will see that changes are synced to your laptop's `./test_folder` directory
+7. Stop and remove container (`docker-compose down`) and restart again (`docker-compose up`). Then, inspect list of docker volumes (`docker volume ls`). You will see that existing named `volumes` (not `bind mount`) persists and are remounted to a new container, while anonymous `volumes` are recreated anew every time `docker-compose up` is run.
